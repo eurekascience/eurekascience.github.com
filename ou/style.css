@@ -1,0 +1,24 @@
+#container { width:320px; height:800px; margin:auto; }
+
+#outerdiv {
+top:120px;
+width:320px;
+height:568;
+overflow:hidden;
+position:relative;
+}
+#innerdiv {
+position:center;
+top:0px;
+left:0px;
+width:325px;
+height:570px;
+}
+
+body
+{
+background-image:url('iphone.png');
+background-color:#cccccc;
+background-repeat: no-repeat;
+background-position:center; 
+}
