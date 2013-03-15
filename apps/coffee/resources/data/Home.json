@@ -1,0 +1,22 @@
+[
+  {
+    "text": "Σχήματα",
+    "id": "shapesnode",
+    "image": true,
+    "detail": true,
+    "filter": false,
+    "sorter": "term",
+    "grouper": "term",
+    "leaf": true
+  },
+  {
+    "text": "Σύμβολα",
+    "id": "symbolsnode",
+    "image": true,
+    "detail": true,
+    "filter": false,
+    "sorter": "term",
+    "grouper": "term",
+    "leaf": true
+  }
+]

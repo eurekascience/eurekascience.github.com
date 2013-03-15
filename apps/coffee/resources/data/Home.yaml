@@ -1,0 +1,16 @@
+- text: Σχήματα
+  id: shapesnode
+  image: yes
+  detail: yes
+  filter: no
+  sorter: term
+  grouper: term
+  leaf: true
+- text: Σύμβολα
+  id: symbolsnode
+  image: yes
+  detail: yes
+  filter: no
+  sorter: term
+  grouper: term
+  leaf: true
