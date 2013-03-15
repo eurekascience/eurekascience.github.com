@@ -1,0 +1,18 @@
+- image: general.png
+  children:
+  - text: Area
+    leaf: true
+  - text: Density
+    leaf: true
+  - text: Energy
+    leaf: true
+  text: General
+- text: Fluid Properties
+  image: fluid.png
+  children:
+  - text: Fluid Consistency Index
+    leaf: true
+  - text: Fluid Yield Point
+    leaf: true
+  - text: Viscosity (Dynamic)
+    leaf: true
