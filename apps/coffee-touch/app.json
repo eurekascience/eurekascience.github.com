@@ -1,1 +1,1 @@
-/Users/nikos/Projects/mobile/CoffeeApps/CoffeeAppEL/build/CoffeeAppEL/production/app.json
+{"id":"accb4819-bbbd-40e4-9758-28c9358bd8e0","js":[{"path":"app.js","bundle":true,"update":"delta","type":"js","version":"661bcee46a3d796fbe45f81f3212ac464d89caed"}],"css":[{"path":"touch/resources/css/base.css","update":"delta","type":"css","version":"d51dc734dbb2da354d46fbc85032f50d233596a8"},{"path":"resources/css/app.css","update":"delta","type":"css","version":"32900c5b6337146a9cf712ef59da7c4b61ca6e06"}]}
