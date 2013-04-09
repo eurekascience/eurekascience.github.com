@@ -1,112 +1,112 @@
 [
   {
-    "text": "Γραμμές",
-    "sorter": "γραμμές",
+    "text": "Lines",
+    "sorter": "lines",
     "code": "line-continuous",
     "children": [
       {
-        "text": "Συνεχείς",
+        "text": "Continuous",
         "sorter": "01",
         "code": "line-continuous",
-        "definition": "Δρόμος για κάποια υπόθεσή σας. Ο δρόμος σας θα είναι χωρίς εμπόδια και η υπόθεσή σας θα έχει ευχάριστο τέλος. Κοιτάξτε στην αρχή και στο τέλος της γραμμής: Αν διακρίνετε ένα πρόσωπο, τότε ο δρόμος αφορά σε φίλο ή συγγενή και όχι εσάς.",
+        "definition": "You will embark on journey a trip for an issue that is affecting you. Your journey will be smooth and without difficulties and the issue will be positively resolved. If the line begins and ends with a the shape of a face, your journey will be related to a relative or a friend.",
         "leaf": true
       },
       {
-        "text": "Διακεκομμένες",
+        "text": "Broken",
         "sorter": "02",
         "code": "line-broken",
-        "definition": "Δρόμος για επαγγελματικό ή προσωπικό λόγο, με εμπόδια. Όσο περισσότερες διακοπές έχει η γραμμή, τόσο περισσότερα θα είναι τα εμπόδια. Κοιτάξτε στην αρχή και στο τέλος της γραμμής: Αν διακρίνετε ένα πρόσωπο, τότε ο δρόμος αφορά σε φίλο ή συγγενή και όχι εσάς.",
+        "definition": "A sickness or a journey with difficulties. The more times the line is broken, the more serious the sickness or the greater number of difficulties. If the line  begins and ends with a the shape of a face, your journey will be about a relative or a friend.",
         "leaf": true
       },
      {
-        "text": "Καμπύλες",
+        "text": "Curved",
         "sorter": "03",
         "code": "line-curved",
-        "definition": "Έχετε ένα φίλο που όμως είναι φίδι. Προσοχή. Σας ζηλεύει και πιθανώς να σας βλάψει. Ψάξτε και μέσα στους συγγενείς σας, κυρίως στις γυναίκες. Αν η καμπύλη είναι διακεκομμένη, τότε έχετε τόσους κακούς φίλους όσα και τα κομμάτια της γραμμής.",
+        "definition": "You have a friendship that might be fake and insincere. You will have to be careful because your friend might be envious of you and wants to hurt you. The persons that might hurt you might also be relatives. If the curved line is also broken, then you have as many bad friends as the pieces of the curve.",
         "leaf": true
       },
       {
-        "text": "Ζιγκ-ζαγκ",
+        "text": "Bent",
         "sorter": "04",
         "code": "line-bent",
-        "definition": "Υπάρχει κάτι που Θέλετε πολύ να πραγματοποιηθεί. Σκέφτεστε κάτι έντονα να το ζήσετε. Το πιθανότερο είναι να αφορά οικονομικό θέμα, το οποίο προς το παρόν θα πρέπει να το αφήσετε στην τύχη του. Προσπαθήστε να χαλαρώσετε λίγο και μετά από λίγο καιρό ξαναπροσπαθήστε.",
+        "definition": "Your personal affairs are not going well and there is little hope that they will improve in the future. A complete financial failure is not our of the question and you might go bankrupt. To avoid such developments you may need to perform some decisive maneuvers in your financial, social and love life.",
         "leaf": true
       },
       {
-        "text": "Μακριές",
+        "text": "Long",
         "sorter": "05",
         "code": "line-long",
-        "definition": "Θα περάσετε όμορφες και γαλήνιες στιγμές με τους ανθρώπους που αγαπάτε ή με τον άνθρωπό σας. Επιλέξτε την ηρεμία και τους χαμηλούς τόνους στη ζωή σας, γιατί αλλιώς θα έχετε απρόοπτες και δυσάρεστες εξελίξεις.",
+        "definition": "You will experience a quiet period in your life, your family life will be peaceful, without excitement or surprising events. You will be able to think about your own affairs. But if you like an exciting life, the period will be uncomfortable.",
         "leaf": true
       },
       {
-        "text": "Με προεξοχές",
+        "text": "Branched",
         "sorter": "06",
         "code": "line-branched",
-        "definition": "Η ζωή σας θα είναι καλή και ευτυχισμένη. Θα ζήσετε πολλά χρόνια με έντονες συγκινήσεις και αρκετά συναιστηματικά σκαμπανεβάσματα.",
+        "definition": "You will have a good and happy old age. If the branches are long and curly, your life will alternate between happiness and sorrow.",
         "leaf": true
       },
     ]
   },
   {
-    "text": "Κύκλοι",
-    "sorter": "κύκλοι",
+    "text": "Circles",
+    "sorter": "circles",
     "code": "circle",
     "children": [
   {
-    "text": "Συνεχείς",
+    "text": "Continuous",
     "sorter": "01",
     "code": "circle",
-    "definition": "Λεφτά, λεφτά, λεφτά! Κάνετε ακριβώς αυτό που σκέφτεστε και θα ζήσετε το όνειρό σας. (Ο κύκλος είναι πολύ σημαντικό σύμβολο στην καφεμαντεία. Μπορείτε να ρίξετε το φλιτζάνι μόνο και μόνο για να συμβουλευθείτε αυτό το σύμβολο. Για αυτό το λόγο είναι πολύ σημαντικό ο κύκλος να είναι ευδιάκριτος και πλήρης.)",
+    "definition": "The circle is an important symbol in coffee interpretation. Sometimes it is enough to focus your attention just on this symbol. For this reason, it is very important that the cycle is distinct and complete. If there is a single circle, you will earn money and succeed in your affairs. If there several dispersed circles, the money will be plenty and your success will be great.",
     "leaf": true
   },
   {
-    "text": "Διακεκομμένοι",
+    "text": "Broken",
     "sorter": "02",
     "code": "circle-cut",
-    "definition": "Λόγια από τρίτο πρόσωπο που θα σας φέρουν απογοήτευση και πίκρα σχετικά με κάτι που προσδοκούσατε.",
+    "definition": "You will receive an unpleasant piece of information from a third party. This information will shatter your hopes and dreams for some of your affairs. The more breaks there are in the circle, the more reliable the piece of information.",
     "leaf": true
   },
   {
-    "text": "Στη σειρά",
+    "text": "In series",
     "sorter": "03",
     "code": "circle-series",
-    "definition": "Θα πάρετε χρήματα. Όσο πιο πολλοί οι κύκλοι, τόσο πιο πολλά τα χρήματα. Αν οι κύκλοι έχουν σχήμα αυγού, είναι πολύ καλό σημάδι αν έχετε επιχειρήσεις. Οι υποθέσεις σας θα πάνε πολύ καλά και θα έχουν πολλά κέρδη.",
+    "definition": "You will receive money. The greater the number of circles, the higher the amount of money that you will receive. If the circles are egg-shaped and you have a business, this is a great sign: The state of your affairs will improve and you will have many profits from your business.",
     "leaf": true
   },
   {
-    "text": "Με στίγματα",
+    "text": "With dots",
     "sorter": "04",
     "code": "circle-dot",
-    "definition": "Αν είστε γυναίκα, μάλλον είστε έγγυος, ή θα μείνετε έγγυος σύντομα. Αν είστε άντρας, θα βιώσετε την πατρότητα.",
+    "definition": "You may soon have a child. If you see two circles with four dots each, you may have two children very soon. In general, the higher the number of circles with four dots, the greater the number of children that you will have.",
     "leaf": true
   },
   ]
 },
   {
-    "text": "Τετράγωνα",
-    "sorter": "τετράγωνα",
+    "text": "Squares",
+    "sorter": "squares",
     "code": "square",
     "children": [
       {
-        "text": "Μόνα τους",
+        "text": "Alone",
         "sorter": "01",
         "code": "square",
-        "definition": "Η αγάπη, ό,τι πιο όμορφο, θα γίνει η αλήθεια στη ζωή σας. Θα τη ζήσετε στο κόκκινο, αμοιβαία και υπέροχα. (Το τετράγωνο είναι το σχέδιο για τα αισθηματικά σας θέματα. Για να είναι έγκυρο το σύμβολο, πρέπει να είναι καλοσχεδιασμένο και ευδιάκριτο.)", 
+        "definition": "The square is the symbol for your emotional affairs. In order to be valid, the symbol has to be clear. You will achieve emotional happiness. The person that you love has many and great virtues.",
         "leaf": true
       },
       {
-        "text": "Στη σειρά",
+        "text": "In series",
         "sorter": "02",
         "code": "square-many",
-        "definition": "Έχετε στο πλάι σας ένα φίλο ψεύτικο που θέλει να σας εκμεταλευτεί οικονομικά και ίσως και συναισθηματικά. Φροντίστε να μην το πετύχει.",
+        "definition": "Someone that you consider a friend will try to steal money or happiness from you, and in the end the person might succeed.",
         "leaf": true
       },
   ]
   },
   {
-    "text": "Πρόσωπα",
-    "sorter": "προσωπα",
+    "text": "Faces",
+    "sorter": "faces",
     "code": "face",
     "children": [
     // {
@@ -117,252 +117,250 @@
     //   "leaf": true
     // },
     {
-      "text": "Χωρίς κορμό",
+      "text": "Without body",
       "sorter": "01",
       "code": "head-armless",
-      "definition": "Θα δημιουργήσετε μια νέα σχέση με ένα πρόσωπο που θα σταθεί δίπλα σας σαν αδελφή ψυχή.",
+      "definition": "You will form a new relationship with a person who will help you a lot with your affairs.",
       "leaf": true
     },
     {
-      "text": "Με τα χέρια ψηλά",
+      "text": "With arms up",
       "sorter": "02",
       "code": "head-armsup",
-      "definition": "Έχετε υψηλή και μεγάλη προστασία, από πρόσωπο που είτε είναι στη ζωή σας, είτε έχει πεθάνει και το αγαπούσατε πολύ. Είναι δίπλα σας και ό,τι του ζητήσετε θα σας βοηθήσει να το ζήσετε.",
+      "definition": "There is a serious person in your life who is faithful to you and is protecting you. This person is very willing to serve you, if you ever need help.",
       "leaf": true
     },
     {
-      "text": "Με τα χέρια χαμηλά",
+      "text": "With arms down",
       "sorter": "03",
       "code": "face",
-      "definition": "Στη ζωή σας υπάρχει ένας εχθρός, αν και θεωρείτε ότι αυτό το άτομο θέλει να σας βοηθήσει. Αντιθέτως, αυτό το άτομο ψάχνει να βρει την κατάλληλη στιγμή να σας βλάψει, να σας εκθέσει και να σας κοροϊδέψει. Δεν είναι ώρα να το απομακρύνετε;",
+      "definition": "There is a person in your life who you think is a friend but is actually an enemy. This person is looking for the right opportunity to hurt you with negative words and actions.",
       "leaf": true
     },
     ]
   },
   {
-    "text": "Τρίγωνα",
-    "sorter": "τριγωνα",
+    "text": "Triangles",
+    "sorter": "triangles",
     "code": "triangle",
     "children": [
     {
-      "text": "Μόνα τους",
+      "text": "Alone",
       "sorter": "01",
       "code": "triangle",
-      "definition": "Θα έχετε μια ανέλπιστη τύχη στις οικονομικές ή καλλιτεχνικές υποθέσεις σας. Αυτή η τύχη θα ανοίξει δρόμους για νέες επιτυχίες. Περισσότερα από ένα τρίγωνα προμηνύουν κάθε είδους επιτυχία στον οικονομικό, κοινωνικό και συναισθηματικό τομέα.",
+      "definition": "You will have an unhoped for good fortune in your financial or artistic affairs. The fortune will pave the way for additional successes. More than one triangles signify that you will be successful in the financial, social and emotional life.",
       "leaf": true
     },
     {
-      "text": "Σε στεφάνι",
+      "text": "In a ring",
       "sorter": "02",
       "code": "triangle-ring",
-      "definition": "Θα μάθετε ένα κακό νέο, πιθανόν για ένα θάνατο, ξαφνικά και χωρίς προειδοποίηση.",
+      "definition": "You will receive some bad news, maybe about a death. The death might be in your family and it might be a close relative.",
       "leaf": true
     },
     ]
   },
 
-
   {
-    "text": "Σταυροί",
-    "sorter": "σταυροι",
+    "text": "Crosses",
+    "sorter": "crosses",
     "code": "cross",
     "children": [
     {
-      "text": "Μόνοι τους",
+      "text": "Alone",
       "sorter": "01",
       "code": "cross",
-      "definition": "Ανάλογα με το πόσο έντονος είναι και ανάλογα με τη θέση άλλων σχημάτων ως προς αυτόν, ο σταυρός έχει διαφορετική σημασία. Αν ο σταυρός είναι πολύ σκούρος, θα μάθετε για το θάνατο ενός συγγενικού ή φιλικού σας προσώπου. Όσο πιο έντονος είναι ο σταυρός, τόσο πιο συγγενικό ή φιλικό θα είναι το πρόσωπο. Αν ο σταυρός είναι κοντά σε μια αλυσίδα, τότε θα πεθάνει άτομο για το οποίο τρέφετε έρωτα ή συνδέεστε μαζί του. Αν ο σταυρός έχει στο κάτω μέρος του το πρόσωπο ενός ανθρώπου, θα παντρευτείτε. Αν ο σταυρός έχει στο πάνω μέρος του το πρόσωπο ενός ανθρώπου, ένα πρόσωπο του περιβάλλοντός σας θα παντρευτεί.",
+      "definition": "Depending on its intensity and on the location of other symbols in relation to it, the presence of a cross may have various interpretations. If the cross is very intense, you will hear about the death of a relative or a friend. If the cross is near a chain, you will hear about the death of someone you are in love with or in a relationship with. If the cross is on the bottom of a face, you will get married. If the cross is on the top of a face, a person that you know will get married.",
       "leaf": true
     },
     {
-      "text": "Σε στεφάνι",
+      "text": "In a ring",
       "sorter": "02",
       "code": "cross-ring",
-      "definition": "Ξαφνικός θάνατος σε αγαπημένο σας πρόσωπο, οικείο.",
+      "definition": "A death in your house. It may be your parents or your siblings.",
       "leaf": true
     },
     ]
   },
   {
-    "text": "Ζώα",
-    "sorter": "ζωα",
+    "text": "Animals",
+    "sorter": "animals",
     "code": "animal",
     "children": [
     {
-      "text": "Φίδια",
-      "sorter": "Φίδι",
+      "text": "Snakes",
+      "sorter": "snake",
       "code": "snake",
-      "definition": "Κάποιο άτομο σας ζηλεύει και δεν χάνει ευκαιρία να σας συκοφαντήσει σε γνωστά σας πρόσωπα. Το άτομο αυτό μπορεί να είναι από το στενό σας περιβάλλον, και με αυτόν το τρόπο προδίδει τη φιλία σας. Πρέπει να είστε προσεκτικοί ώστε να το επισημάνετε και να το απομακρύνετε όσο το δυνατό συντομότερα από κοντά σας, πριν σας κάνει κακό, αν δεν σας έχει κάνει ήδη. Για σκεφτείτε το...",
+      "definition": "Someone is jealous of you and never misses a chance to slander you to friends and acquaintances. That person might be a close friend who is betraying your friendship. You have to be vigilant in order to find that person and remove it from your environment, before you get hurt.",
       "leaf": true
     },
     {
-      "text": "Ψάρια",
-      "sorter": "Ψάρια",
+      "text": "Fish",
+      "sorter": "Fish",
       "code": "fish",
-      "definition": "Φαινομενική ευτυχία. Το άτομο με το οποίο μοιράζεστε την ευτυχία σας, σας κοροϊδεύει αλλά πολύ σύντομα θα αποκαλυφθεί και θα διαπιστώσετε τους πραγματικούς σκοπούς του. Αν δείτε περισσότερα από ένα ψάρια, θα έχετε μια μεγάλη απογοήτευση από κάτι που θεωρούσατε σίγουρο.",
+      "definition": "Apparent but not true happiness. The person with whom you share your happiness is fooling you but that person and its true motivations will soon be revealed. If there is more than one fish you will get frustrated from something or someone that you considered trustworthy.",
       "leaf": true
     },
     {
-      "text": "Πουλιά",
-      "sorter": "Πουλί",
+      "text": "Birds",
+      "sorter": "Birds",
       "code": "bird",
-      "definition": "Μια ευχάριστη είδηση που θα σας φτιάξει το κέφι. Γενικά, όλα τα πουλιά συμβολίζουν τον αγγελιοφόρο ενός ευχάριστου νέου. Αν το πουλί είναι περιστέρι, τότε το ευχάριστο νέο θα έρθει από μακριά.",
+      "definition": "All birds symbolize the messenger of good but not important news.",
       "leaf": true
     },
     {
-      "text": "Τετράποδα",
-      "sorter": "Τετράποδα",
+      "text": "Four-legged",
+      "sorter": "Four-legged",
       "code": "animal",
-      "definition": "Τα βάσανά σας τελειώνουν. Ο ήλιος βγαίνει ξανά και η αισιοδοξία πλημμυρίζει τη ζωή σας.",
+      "definition": "Good symbol. Something is about to change for the better.",
       "leaf": true
     },
   ]},
   {
-    "text": "Φύση",
-    "sorter": "φυση",
+    "text": "Nature",
+    "sorter": "nature",
     "code": "channel",
     "children": [
     {
-      "text": "Λόφοι",
-      "sorter": "Λόφοι",
+      "text": "Hills",
+      "sorter": "hills",
       "code": "hill",
-      "definition": "Άτομα κοντινά σε εσάς, στο φιλικό η στο επαγγελματικό σας περιβάλλον θέλουν να σας βλάψουν. Βάλτε τα δυνατά σας και απομακρύνετέ τα από τη ζωή σας και τα προσωπικά σας.",
+      "definition": "Some people around you are waiting for the right opportunity to hurt you or make you uncomfortable with slander.",
       "leaf": true
     },
     {
-      "text": "Αυλάκια",
-      "sorter": "Αυλάκια",
+      "text": "Rivers",
+      "sorter": "rivers",
       "code": "channel",
-      "definition": "Ένα αυλάκι προαναγγέλλει ταξίδι. Όσο πιο μεγάλο είναι το αυλάκι σε μήκος, τόσο πιο μεγάλο είναι το ταξίδι σε χρονική διάρκεια. 'Οσο πιο καθαρό είναι το εσωτερικό του αυλακιού, τόσο πιο άνετο θα είναι το ταξίδι. Αν το εσωτερικό του αυλακιού περιέχει κόκκους καφέ, τότε θα έχετε κάποια εμπόδια.",
+      "definition": "A single river means that you will start a journey soon. The longer the river, the longer your journey. The cleaner the river, the more comfortable the journey. If the river contains coffee beans, you will face some setbacks.",
       "leaf": true
     },
     {
-      "text": "Καταρράκτες",
-      "sorter": "καταρράκτες",
+      "text": "Waterfalls",
+      "sorter": "waterfalls",
       "code": "waterfall",
-      "definition": "Θα περάσετε μια περίοδο γεμάτη ανία, απραξία και αδράνεια. Ίσως να είναι καιρός να ξεκουραστείτε και λίγο.",
+      "definition": "A boring period is about to start.",
       "leaf": true
     },
     ]
     },
     {
-    "text": "Φυτά",
-    "sorter": "φυτα",
+    "text": "Plants",
+    "sorter": "plants",
     "code": "thorn",
     "children": [
     {
-      "text": "Αγκάθια",
-      "sorter": "Αγκάθια",
+      "text": "Thorns",
+      "sorter": "thorns",
       "code": "thorn",
-      "definition": "Οι υποθέσεις σας δεν πηγαίνουν καλά και θα καθυστερήσουν λόγω των κακών χειρισμών σας.",
+      "definition": "Your affairs are not going well and they will be delayed because of your bad handling of them.",
       "leaf": true
     },
     {
-      "text": "Μπουκέτα",
-      "sorter": "Μπουκέτο λουλούδια",
+      "text": "Bouquet",
+      "sorter": "bouquet",
       "code": "flower",
-      "definition": "Το μπουκέτο πρέπει να έχει τέσσερα ή περισσότερα λουλούδια. Σύντομα θα σας παρουσιαστούν υποθέσεις και πρέπει να τις αντιμετωπίσετε με ψυχραιμία.",
+      "definition": "The bouquet must have four or more flowers. You will soon face issues that you will have to deal with calmly.",
       "leaf": true
     },
     {
-      "text": "Κλαδιά",
-      "sorter": "Κλαδιά",
+      "text": "Branches",
+      "sorter": "branches",
       "code": "branch",
-      "definition": "Η τύχη σας θέλει. Δοκιμάστε τη με τυχερά παιχνίδια ή με επιχειρηματικές επιλογές.",
+      "definition": "Profits from gambling or from business.",
       "leaf": true
     },
     {
-      "text": "Τριαντάφυλλα",
-      "sorter": "Τριαντάφυλλο",
+      "text": "Roses",
+      "sorter": "roses",
       "code": "rose",
-      "definition": "Το τριαντάφυλλο, όπως και όλα τα λουλούδια, σημαίνει ευτυχία και υγεία.",
+      "definition": "Roses, like other flowers, signify health and happiness.",
       "leaf": true
     },
   ]
   },
   {
-    "text": "Γράμματα",
-    "sorter": "γραμματα",
+    "text": "Letters",
+    "sorter": "letters",
     "code": "letter-h",
     "children": [
     {
-      "text": "Γράμμα ν",
-      "sorter": "Γράμμα ν",
+      "text": "Letter v",
+      "sorter": "letter v",
       "code": "letter-v",
-      "definition": "Θα εναντιωθείτε σε ένα πρόσωπο και θα έχετε ένα καυγά που θα διαψεύσει κάποιες ελπίδες σας. Αν είναι πολλά τα σχήματα, ο καυγάς θα είναι σοβαρός και θα επέλθει ρήξη στη σχέση σας με το πρόσωπο που καυγαδίσατε.",
+      "definition": "You will disagree with someone and have a fight that will disappoint you. If there are several letters, the fight will be serious and break up your relationship with that person.",
       "leaf": true
     },
     {
-      "text": "Γράμμα Η",
-      "sorter": "Γράμμα Η",
+      "text": "Letter H",
+      "sorter": "letter H",
       "code": "letter-h",
-      "definition": "Σοβαρή ασθένεια για εσάς και ίσως να κινδυνεύσει η ζωή σας.",
+      "definition": "Serious health issue for you and your life might be in danger.",
       "leaf": true
     },
     ]},
   {
-    "text": "Τρίποδα",
-    "sorter": "Τρίποδο",
+    "text": "Tripods",
+    "sorter": "tripods",
     "code": "tripod",
-    "definition": "Έχετε παντού εχθρούς και ανοιχτά μέτωπα. Επικεντρωθείτε στον εαυτό σας και συγκεντρώστε τις δυνάμεις σας για να τα αντιμετωπίσετε.",
+    "definition": "You will defeat your enemy and his or her machinations, that stem from jealousy towards you and your situation. Your victory is certain but not easy. You will have to fight with any means you have.",
     "leaf": true
   },
   {
-    "text": "Στεφάνια",
-    "sorter": "Στεφάνια",
+    "text": "Semi-circle",
+    "sorter": "semicircle",
     "code": "semicircle",
-    "definition": "Ένα στεφάνι σημαίνει ότι η επιθυμία σας είναι σε καλό δρόμο και σύντομα θα πραγματοποιηθεί. Πολλά στεφάνια, το ένα κοντά στο άλλο, σημαίνουν ότι ένα άτομο σας προστατεύει. Το άτομο αυτό είναι σημαντικό, έχει μεγάλη θέση και θα συμβάλλει σημαντικά στην ευτυχία σας. Δύο στεφάνια και στη μέση ένας σταυρός προαναγγέλλουν γάμο. Ένα στεφάνι και δίπλα του ένας σταυρός σημαίνει ότι η επιθυμία σας ίσως δεν πραγματοποιηθεί γιατί κάτι απρόβλεπτο θα την εμποδίσει.",
+    "definition": "One semicircle signifies that your desires might soon come true. Many semi-circles, next to each other, signify that there is an important person who is protecting you and contributes to your happiness. Two semi circles surrounding a cross mean a wedding is near. One semicircle next to a cross means that your desire may not come true because something will block it.",
     "leaf": true
   },
 
-
   {
-    "text": "Καβαλάρηδες",
-    "sorter": "Καβαλάρης",
+    "text": "Riders",
+    "sorter": "riders",
     "code": "rider",
-    "definition": "Ένας προστάτης βρίσκεται στο πλευρό σας. Σας δυναμώνει και σας προφυλάσει από κακοτοποιές.",
+    "definition": "If you see a rider on a four-legged animal, there is a person your supporting and helping you, maybe without your knowledge. That person if from your circle of friends and is very powerful.",
     "leaf": true
   },
   {
-    "text": "Σπίτια",
-    "sorter": "Σπίτι",
+    "text": "Houses",
+    "sorter": "houses",
     "code": "house",
-    "definition": "Το σπίτι συμβολίζει την οικογένεια και τον γάμο. Αν το σπίτι βρίσκεται κοντά σε κύκλο, σύντομα θα κάνετε δική σας οικογένεια ή θα αποκτήσετε σπίτι. Αν το σπίτι βρίσκεται κοντά σε σταυρό, το σπίτι θα είναι στην πόλη. Αν βρίσκεται κοντά σε λουλούδια, το σπίτι θα είναι στην εξοχή. Αν το σπίτι βρίσκεται κοντά σε τρίγωνα, το σπίτι δεν θα σας στοιχίσει πολύ ή θα το πάρετε από κληρονομιά ή ως δώρο. Αν στη στέγη του σπιτιού υπάρχει σταυρός, τότε θα ζήσετε σε αυτό το σπίτι για πολλά χρόνια.",
+    "definition": "The house symbolizes the committed relationship. If the house is near a circle, your will soon form your own committed relationship or get a house. If the house is near a cross, the house will be in the city, and if it is near flowers, it will be in the country. If the house is inside a triangle, it will not cost you much, or you will get it as a gift or inheritance. If there is a cross on the roof of the house, you will live in your house for many years.",
     "leaf": true
   },
   {
-    "text": "Πλοία",
-    "sorter": "Πλοίο",
+    "text": "Boats",
+    "sorter": "boats",
     "code": "boat",
-    "definition": "Θα κάνετε ταξίδι. Αν το πλοίο βρίσκεται κοντά σε σταυρό, θα κάνετε ταξίδι για στενάχωρο λόγο. Αν το πλοίο βρίσκεται κοντά σε κλαδιά, το ταξίδι θα σας φέρει κέρδη.",
+    "definition": "You will embark on a journey. If the boat is close to a cross, you will travel because of the death of someone you know. If the boat is close to branches, your journey will bring you great profits.",
     "leaf": true
   },
   {
-    "text": "Κορώνες",
-    "sorter": "Κορώνα",
+    "text": "Crowns",
+    "sorter": "crowns",
     "code": "crown",
-    "definition": "Έχετε ισχυρή προσωπικότητα και κυριαρχείτε στο περιβάλλον σας λόγω των προσόντων σας. Είστε προορισμένοι να ερωτεύεστε και να σας ερωτεύονται δυνατά.",
+    "definition": "You have a strong personality and you dominate your environment because of your qualifications. You are destined to love and be loved passionately.",
     "leaf": true
   },
   {
-    "text": "Αστέρια",
-    "sorter": "Αστέρι",
+    "text": "Stars",
+    "sorter": "stars",
     "code": "star",
-    "definition": "Αμοιβαία αγάπη για πολλά χρόνια. Θα λάβετε μεγάλη ικανοποίηση από άτομο που σας είναι αφοσιωμένο και με το οποίο συνδέεστε συναισθηματικά. Αν υπάρχουν πολλά άστρα, θρίαμβος θα επέλθει στις αισθηματικές σας υποθέσεις.",
+    "definition": "You will get a great satisfaction from a person who is devoted to you and with whom you are emotionally connected. If there are multiple stars, you will triumph in your emotional affairs.",
     "leaf": true
   },
   {
-    "text": "Αλυσίδες",
-    "sorter": "Αλυσίδα",
+    "text": "Chains",
+    "sorter": "chains",
     "code": "chain",
-    "definition": "Ερωτικός δεσμός για άγαμους που μπορεί να καταλήξει και σε γάμο. Αν είστε παντρεμένοι, έχετε τέλεια αρμονία με τον σύντροφό σας, και ίσως σύντομα να αποκτήσετε παιδί.",
+    "definition": "Love affair for singles that might lead to marriage. If you are married, there is a great harmony with your spouse and you may soon have a child.",
     "leaf": true
   },
   {
-    "text": "Φιγούρες",
-    "sorter": "Τρεις ανθρώπινες φιγούρες",
+    "text": "Humans",
+    "sorter": "Humans",
     "code": "human-many",
-    "definition": "Βρίσκεστε πολύ κοντά στον στόχο σας, επαγγελματικό, προσωπικό ή ερωτικό.",
+    "definition": "You are very close to achieving a position that you want.",
     "leaf": true
   },
 ]
