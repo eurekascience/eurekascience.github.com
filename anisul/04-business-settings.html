@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
+
+    <title>CoinSimple - Your Bitcoin Business Dashboard</title>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="assets/icon_font.css">
+	
+    <link data-turbolinks-track="true" href="assets/coinsimple.css" media="all" rel="stylesheet">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	
+	<link rel="stylesheet/less" type="text/css" href="assets/style.less" />
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.min.js"></script>
+	
+	<link rel="stylesheet" href="assets/responsive.css" />
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".toggle_menu").click(function(){
+				$(".sidebar").slideToggle();
+			});
+		});
+	</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">&nbsp;&nbsp;&nbsp;<img alt="Icon" src="./assets/logo.png"></a>
+            </div>
+			<span class="toggle_menu">
+				<img src="assets/toggle_menu_icon.png" alt="" />
+			</span>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+					<li class="message_alert">
+						<a href="#"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span> </a>
+					</li>
+                    <li class="user-icon dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="margin-left: 20px"><img alt="4c7f33da1465b43a770eb785539a3d07?s=48" class="profile_image_circle" src="./assets/4c7f33da1465b43a770eb785539a3d07.png">&nbsp;&nbsp;<span class="name">Nikos Bentenitis</span> <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            <li style="margin-left: 20px">
+                                <span class="icon-folder"></span><a href="04-business-settings.html">Settings</a>
+                            </li>
+
+                            <li style="margin-left: 20px">
+                                <a href="mission_control">Admin Panel</a>
+                            </li>
+
+                            <li style="margin-left: 20px">
+                                <a href="logout">Log out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+    <div class="container">
+        <div class="row controls">
+            <div class="col-md-3 sidebar">
+                <h3 class="active"><i class="glyphicon glyphicon-briefcase"></i>&nbsp;&nbsp;&nbsp;<a href="dash">Dashboard</a></h3>
+            </div>
+
+            <div class="col-md-9 primary large_header">
+                <span class="pull-right"><a class="btn btn-danger float-btn" href="/invoice/new">New Invoice</a></span>
+
+                <h1><span class="glyphicon glyphicon-briefcase"></span>Eureka Science</h1>
+            </div>
+        </div>
+
+        <div class="row account-summary">
+            <a class="col-md-3 sidebar" href="./assets/04-business-settings.html"><img alt="Arrow" class="pull-right" src="./assets/arrow-6e65598bbdefb6e4ffd010962dc474a7.png"> <i class="glyphicon glyphicon-cog"></i>&nbsp;&nbsp;&nbsp;Settings</a>
+
+            <div class="col-md-9 primary large_header subnav">
+                <a class="business_information_button active" href="./assets/04-business-settings.html">Business Information</a> <span class="separator"></span> <a class="processors_settings_button" href="/settings/processors">Wallets and Processors</a>
+            </div>
+        </div>
+
+        <div class="row main">
+            <div class="col-md-3 sidebar">
+                <a class="settings menu_row" href=""><i class="glyphicon glyphicon-list-alt"></i>&nbsp;&nbsp;&nbsp;Invoices</a> <a class="settings menu_row" href="/buttons"><i class="glyphicon glyphicon-tasks"></i>&nbsp;&nbsp;&nbsp;Buttons</a> <a class="settings menu_row" href="/stats"><i class="glyphicon glyphicon-stats"></i>&nbsp;&nbsp;&nbsp;Analytics</a>
+            </div>
+
+            <div class="col-md-9 primary settings-page">
+                <div class="row account-summary">
+                    <div class="primary small_header col-md-12">
+                        <a class="business_information_button active" href="./assets/04-business-settings.html">Business Information</a> <span class="separator"></span> <a class="processors_settings_button" href="/settings/processors">Wallets and Processors</a>
+                    </div>
+                </div>
+
+                <div class="" id="business_information_tab" style="">
+                    <h2>Business Information</h2>
+
+                    <form accept-charset="UTF-8" action="" class="settings_form" id="edit_shop_4" method="post" name="edit_shop_4">
+                        <div style="display:none">
+                            <input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="patch"><input name="authenticity_token" type="hidden" value="bJRvuHEFqflUQHMCCOnk63mruPk6oaHuR4vvJWXd+mo=">
+                        </div>
+
+                        <div>
+                            <span class="tooltip_container" data-open="tooltip" data-text="Enter the name of your business, as it will appear on your invoices sent through CoinSimple."><label for="shop_name">Business name:</label><span class="tooltip_icon glyphicon glyphicon-question-sign" data-original-title="Enter the name of your business, as it will appear on your invoices sent through CoinSimple." data-toggle="tooltip" title=""></span></span> <input id="shop_name" name="shop[name]" type="text" value="Eureka Science">
+                        </div>
+
+                        <div>
+                            <span class="tooltip_container" data-open="tooltip" data-text="Enter the website or slogan of your business, as it will appear on your invoices sent through CoinSimple."><label for="shop_description">Business description:</label><span class="tooltip_icon glyphicon glyphicon-question-sign" data-original-title="Enter the website or slogan of your business, as it will appear on your invoices sent through CoinSimple." data-toggle="tooltip" title=""></span></span> <input id="shop_description" name="shop[description]" type="text" value="www.eurekasciencesolutions.com">
+                        </div>
+
+                        <div>
+                            <span class="tooltip_container" data-open="tooltip" data-text="Enter the address of your business, as it will appear on your invoices sent through CoinSimple." style="vertical-align: top; padding-top: 0px"><label for="shop_address" style="vertical-align: top; padding-top: 0px">Business address:</label><span class="tooltip_icon glyphicon glyphicon-question-sign" data-original-title="Enter the address of your business, as it will appear on your invoices sent through CoinSimple." data-toggle="tooltip" title=""></span></span> 
+                            <textarea id="shop_address" name="shop[address]" rows="3" style="width: 50%">
+1234 Long Street
+Austin TX 78702
+USA</textarea>
+                        </div>
+
+                        <div>
+                            <span class="tooltip_container" data-open="tooltip" data-text="Select the currency that your products or services are priced in. The price can be expressed in any national currency or in bitcoin"><label for="shop_default_currency">Default currency:</label><span class="tooltip_icon glyphicon glyphicon-question-sign" data-original-title="Select the currency that your products or services are priced in. The price can be expressed in any national currency or in bitcoin" data-toggle="tooltip" title=""></span></span> <select id="shop_default_currency" name="shop[default_currency]">
+                                <option value="aed">
+                                    AED
+                                </option>
+
+                                <option value="afn">
+                                    AFN
+                                </option>
+
+                                <option value="all">
+                                    ALL
+                                </option>
+
+                                <option value="amd">
+                                    AMD
+                                </option>
+
+                                <option value="ang">
+                                    ANG
+                                </option>
+
+                                <option value="aoa">
+                                    AOA
+                                </option>
+
+                                <option value="ars">
+                                    ARS
+                                </option>
+
+                                <option value="aud">
+                                    AUD
+                                </option>
+
+                                <option value="awg">
+                                    AWG
+                                </option>
+
+                                <option value="azn">
+                                    AZN
+                                </option>
+
+                                <option value="bam">
+                                    BAM
+                                </option>
+
+                                <option value="bbd">
+                                    BBD
+                                </option>
+
+                                <option value="bdt">
+                                    BDT
+                                </option>
+
+                                <option value="bgn">
+                                    BGN
+                                </option>
+
+                                <option value="bhd">
+                                    BHD
+                                </option>
+
+                                <option value="bif">
+                                    BIF
+                                </option>
+
+                                <option value="bmd">
+                                    BMD
+                                </option>
+
+                                <option value="bnd">
+                                    BND
+                                </option>
+
+                                <option value="bob">
+                                    BOB
+                                </option>
+
+                                <option value="brl">
+                                    BRL
+                                </option>
+
+                                <option value="bsd">
+                                    BSD
+                                </option>
+
+                                <option value="btc">
+                                    BTC
+                                </option>
+
+                                <option value="btn">
+                                    BTN
+                                </option>
+
+                                <option value="bwp">
+                                    BWP
+                                </option>
+
+                                <option value="byr">
+                                    BYR
+                                </option>
+
+                                <option value="bzd">
+                                    BZD
+                                </option>
+
+                                <option value="cad">
+                                    CAD
+                                </option>
+
+                                <option value="cdf">
+                                    CDF
+                                </option>
+
+                                <option value="chf">
+                                    CHF
+                                </option>
+
+                                <option value="clf">
+                                    CLF
+                                </option>
+
+                                <option value="clp">
+                                    CLP
+                                </option>
+
+                                <option value="cny">
+                                    CNY
+                                </option>
+
+                                <option value="cop">
+                                    COP
+                                </option>
+
+                                <option value="crc">
+                                    CRC
+                                </option>
+
+                                <option value="cuc">
+                                    CUC
+                                </option>
+
+                                <option value="cup">
+                                    CUP
+                                </option>
+
+                                <option value="cve">
+                                    CVE
+                                </option>
+
+                                <option value="czk">
+                                    CZK
+                                </option>
+
+                                <option value="djf">
+                                    DJF
+                                </option>
+
+                                <option value="dkk">
+                                    DKK
+                                </option>
+
+                                <option value="dop">
+                                    DOP
+                                </option>
+
+                                <option value="dzd">
+                                    DZD
+                                </option>
+
+                                <option value="eek">
+                                    EEK
+                                </option>
+
+                                <option value="egp">
+                                    EGP
+                                </option>
+
+                                <option value="ern">
+                                    ERN
+                                </option>
+
+                                <option value="etb">
+                                    ETB
+                                </option>
+
+                                <option selected="selected" value="eur">
+                                    EUR
+                                </option>
+
+                                <option value="fjd">
+                                    FJD
+                                </option>
+
+                                <option value="fkp">
+                                    FKP
+                                </option>
+
+                                <option value="gbp">
+                                    GBP
+                                </option>
+
+                                <option value="gel">
+                                    GEL
+                                </option>
+
+                                <option value="ggp">
+                                    GGP
+                                </option>
+
+                                <option value="ghs">
+                                    GHS
+                                </option>
+
+                                <option value="gip">
+                                    GIP
+                                </option>
+
+                                <option value="gmd">
+                                    GMD
+                                </option>
+
+                                <option value="gnf">
+                                    GNF
+                                </option>
+
+                                <option value="gtq">
+                                    GTQ
+                                </option>
+
+                                <option value="gyd">
+                                    GYD
+                                </option>
+
+                                <option value="hkd">
+                                    HKD
+                                </option>
+
+                                <option value="hnl">
+                                    HNL
+                                </option>
+
+                                <option value="hrk">
+                                    HRK
+                                </option>
+
+                                <option value="htg">
+                                    HTG
+                                </option>
+
+                                <option value="huf">
+                                    HUF
+                                </option>
+
+                                <option value="idr">
+                                    IDR
+                                </option>
+
+                                <option value="ils">
+                                    ILS
+                                </option>
+
+                                <option value="imp">
+                                    IMP
+                                </option>
+
+                                <option value="inr">
+                                    INR
+                                </option>
+
+                                <option value="iqd">
+                                    IQD
+                                </option>
+
+                                <option value="irr">
+                                    IRR
+                                </option>
+
+                                <option value="isk">
+                                    ISK
+                                </option>
+
+                                <option value="jep">
+                                    JEP
+                                </option>
+
+                                <option value="jmd">
+                                    JMD
+                                </option>
+
+                                <option value="jod">
+                                    JOD
+                                </option>
+
+                                <option value="jpy">
+                                    JPY
+                                </option>
+
+                                <option value="kes">
+                                    KES
+                                </option>
+
+                                <option value="kgs">
+                                    KGS
+                                </option>
+
+                                <option value="khr">
+                                    KHR
+                                </option>
+
+                                <option value="kmf">
+                                    KMF
+                                </option>
+
+                                <option value="kpw">
+                                    KPW
+                                </option>
+
+                                <option value="krw">
+                                    KRW
+                                </option>
+
+                                <option value="kwd">
+                                    KWD
+                                </option>
+
+                                <option value="kyd">
+                                    KYD
+                                </option>
+
+                                <option value="kzt">
+                                    KZT
+                                </option>
+
+                                <option value="lak">
+                                    LAK
+                                </option>
+
+                                <option value="lbp">
+                                    LBP
+                                </option>
+
+                                <option value="lkr">
+                                    LKR
+                                </option>
+
+                                <option value="lrd">
+                                    LRD
+                                </option>
+
+                                <option value="lsl">
+                                    LSL
+                                </option>
+
+                                <option value="ltl">
+                                    LTL
+                                </option>
+
+                                <option value="lvl">
+                                    LVL
+                                </option>
+
+                                <option value="lyd">
+                                    LYD
+                                </option>
+
+                                <option value="mad">
+                                    MAD
+                                </option>
+
+                                <option value="mdl">
+                                    MDL
+                                </option>
+
+                                <option value="mga">
+                                    MGA
+                                </option>
+
+                                <option value="mkd">
+                                    MKD
+                                </option>
+
+                                <option value="mmk">
+                                    MMK
+                                </option>
+
+                                <option value="mnt">
+                                    MNT
+                                </option>
+
+                                <option value="mop">
+                                    MOP
+                                </option>
+
+                                <option value="mro">
+                                    MRO
+                                </option>
+
+                                <option value="mtl">
+                                    MTL
+                                </option>
+
+                                <option value="mur">
+                                    MUR
+                                </option>
+
+                                <option value="mvr">
+                                    MVR
+                                </option>
+
+                                <option value="mwk">
+                                    MWK
+                                </option>
+
+                                <option value="mxn">
+                                    MXN
+                                </option>
+
+                                <option value="myr">
+                                    MYR
+                                </option>
+
+                                <option value="mzn">
+                                    MZN
+                                </option>
+
+                                <option value="nad">
+                                    NAD
+                                </option>
+
+                                <option value="ngn">
+                                    NGN
+                                </option>
+
+                                <option value="nio">
+                                    NIO
+                                </option>
+
+                                <option value="nok">
+                                    NOK
+                                </option>
+
+                                <option value="npr">
+                                    NPR
+                                </option>
+
+                                <option value="nzd">
+                                    NZD
+                                </option>
+
+                                <option value="omr">
+                                    OMR
+                                </option>
+
+                                <option value="pab">
+                                    PAB
+                                </option>
+
+                                <option value="pen">
+                                    PEN
+                                </option>
+
+                                <option value="pgk">
+                                    PGK
+                                </option>
+
+                                <option value="php">
+                                    PHP
+                                </option>
+
+                                <option value="pkr">
+                                    PKR
+                                </option>
+
+                                <option value="pln">
+                                    PLN
+                                </option>
+
+                                <option value="pyg">
+                                    PYG
+                                </option>
+
+                                <option value="qar">
+                                    QAR
+                                </option>
+
+                                <option value="ron">
+                                    RON
+                                </option>
+
+                                <option value="rsd">
+                                    RSD
+                                </option>
+
+                                <option value="rub">
+                                    RUB
+                                </option>
+
+                                <option value="rwf">
+                                    RWF
+                                </option>
+
+                                <option value="sar">
+                                    SAR
+                                </option>
+
+                                <option value="sbd">
+                                    SBD
+                                </option>
+
+                                <option value="scr">
+                                    SCR
+                                </option>
+
+                                <option value="sdg">
+                                    SDG
+                                </option>
+
+                                <option value="sek">
+                                    SEK
+                                </option>
+
+                                <option value="sgd">
+                                    SGD
+                                </option>
+
+                                <option value="shp">
+                                    SHP
+                                </option>
+
+                                <option value="sll">
+                                    SLL
+                                </option>
+
+                                <option value="sos">
+                                    SOS
+                                </option>
+
+                                <option value="srd">
+                                    SRD
+                                </option>
+
+                                <option value="std">
+                                    STD
+                                </option>
+
+                                <option value="svc">
+                                    SVC
+                                </option>
+
+                                <option value="syp">
+                                    SYP
+                                </option>
+
+                                <option value="szl">
+                                    SZL
+                                </option>
+
+                                <option value="thb">
+                                    THB
+                                </option>
+
+                                <option value="tjs">
+                                    TJS
+                                </option>
+
+                                <option value="tmm">
+                                    TMM
+                                </option>
+
+                                <option value="tmt">
+                                    TMT
+                                </option>
+
+                                <option value="tnd">
+                                    TND
+                                </option>
+
+                                <option value="top">
+                                    TOP
+                                </option>
+
+                                <option value="try">
+                                    TRY
+                                </option>
+
+                                <option value="ttd">
+                                    TTD
+                                </option>
+
+                                <option value="twd">
+                                    TWD
+                                </option>
+
+                                <option value="tzs">
+                                    TZS
+                                </option>
+
+                                <option value="uah">
+                                    UAH
+                                </option>
+
+                                <option value="ugx">
+                                    UGX
+                                </option>
+
+                                <option value="usd">
+                                    USD
+                                </option>
+
+                                <option value="uyu">
+                                    UYU
+                                </option>
+
+                                <option value="uzs">
+                                    UZS
+                                </option>
+
+                                <option value="vef">
+                                    VEF
+                                </option>
+
+                                <option value="vnd">
+                                    VND
+                                </option>
+
+                                <option value="vuv">
+                                    VUV
+                                </option>
+
+                                <option value="wst">
+                                    WST
+                                </option>
+
+                                <option value="xaf">
+                                    XAF
+                                </option>
+
+                                <option value="xag">
+                                    XAG
+                                </option>
+
+                                <option value="xau">
+                                    XAU
+                                </option>
+
+                                <option value="xcd">
+                                    XCD
+                                </option>
+
+                                <option value="xdr">
+                                    XDR
+                                </option>
+
+                                <option value="xof">
+                                    XOF
+                                </option>
+
+                                <option value="xpf">
+                                    XPF
+                                </option>
+
+                                <option value="yer">
+                                    YER
+                                </option>
+
+                                <option value="zar">
+                                    ZAR
+                                </option>
+
+                                <option value="zmk">
+                                    ZMK
+                                </option>
+
+                                <option value="zmw">
+                                    ZMW
+                                </option>
+
+                                <option value="zwl">
+                                    ZWL
+                                </option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <span class="tooltip_container" data-open="tooltip" data-text="Select the bitcoin price source that CoinSimple will use to create your invoices. You can also change the bitcoin price source for each invoice that you create."><label for="shop_default_rate">Default source of BTC price:</label><span class="tooltip_icon glyphicon glyphicon-question-sign" data-original-title="Select the bitcoin price source that CoinSimple will use to create your invoices. You can also change the bitcoin price source for each invoice that you create." data-toggle="tooltip" title=""></span></span> <select id="shop_default_rate" name="shop[default_rate]">
+                                <option value="bitpay">
+                                    BitPay
+                                </option>
+
+                                <option value="bitcoinaverage">
+                                    Bitcoin Average
+                                </option>
+
+                                <option value="blockchain">
+                                    Blockchain.info
+                                </option>
+
+                                <option value="coinbase">
+                                    Coinbase
+                                </option>
+
+                                <option value="coindesk">
+                                    Coindesk
+                                </option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <span class="tooltip_container" data-open="tooltip" data-text="Select the Bitcoin wallet or payment processor that your payments will go through. You can also change the processor for each invoice that you create."><label for="shop_default_processor">Default wallet or processor:</label><span class="tooltip_icon glyphicon glyphicon-question-sign" data-original-title="Select the Bitcoin wallet or payment processor that your payments will go through. You can also change the processor for each invoice that you create." data-toggle="tooltip" title=""></span></span> <select id="shop_default_processor" name="shop[default_processor]">
+                                <optgroup label="My Wallets">
+                                    <option selected="selected" value="armory">
+                                        Armory
+                                    </option>
+
+                                    <option value="trezor">
+                                        Trezor
+                                    </option>
+
+                                    <option value="multisigelectrum">
+                                        Multi-Sig Electrum
+                                    </option>
+                                </optgroup>
+
+                                <optgroup label="My Exchanges">
+                                    <option value="mexbt">
+                                        MeXBT
+                                    </option>
+                                </optgroup>
+
+                                <optgroup label="My Processors">
+                                    <option value="gocoin">
+                                        GoCoin
+                                    </option>
+                                </optgroup>
+                            </select>
+                        </div><script>
+var url_for_rates = "/dash/app/info/invoice/rates_for_currency/_CURRENCY_";
+                        function update_rates_for_business() {
+                        $.get(url_for_rates.replace("_CURRENCY_", $("#shop_default_currency").val())).done(function(data_options){
+                        $("#shop_default_rate").html(data_options);
+                        if ($("#shop_default_rate").find('[value="bitpay"]').length > 0) {
+                        $("#shop_default_rate").val("bitpay");
+                        }
+                        });
+                        }
+                        $("#shop_default_currency").on("change", update_rates_for_business);
+                        update_rates_for_business();
+                        </script>
+
+                        <div>
+                            <label for="shop_receive_email_on_payment">Receive email when you get paid?</label> <input name="shop[receive_email_on_payment]" type="hidden" value="0"><input checked="checked" id="shop_receive_email_on_payment" name="shop[receive_email_on_payment]" type="checkbox" value="1">
+                        </div>
+
+                        <div>
+                            <label for="shop_recieve_invoice_mail">Receive email when you create a new invoice?</label> <input name="shop[recieve_invoice_mail]" type="hidden" value="0"><input checked="checked" id="shop_recieve_invoice_mail" name="shop[recieve_invoice_mail]" type="checkbox" value="1">
+                        </div>
+
+                        <div>
+                            &nbsp;
+                        </div><input class="btn btn-default" name="commit" type="submit" value="Save changes">
+                    </form>
+
+                    <h2> <span class="glyphicon glyphicon-wrench"></span> API credentials</h2>
+
+                    <div class="label_left">
+                        <span class="tooltip_container" data-open="tooltip" data-text="To use a CoinSimple plugin with Magento, WooCommerce, Wordress, etc., you will need two pieces of information: your Business ID and your API Key.">Business ID: 4<span class="tooltip_icon glyphicon glyphicon-question-sign" data-original-title="To use a CoinSimple plugin with Magento, WooCommerce, Wordress, etc., you will need two pieces of information: your Business ID and your API Key." data-toggle="tooltip" title=""></span></span>
+                    </div>
+
+                    <div class="label_left">
+                        <span class="tooltip_container" data-open="tooltip" data-text="To use a CoinSimple plugin with Magento, WooCommerce, Wordress, etc., you will need two pieces of information: your Business ID and your API Key.">API key: <span class="key_value">c62be45a4229942ce2c24040eb37313e95cd7dfb</span><span class="tooltip_icon glyphicon glyphicon-question-sign" data-original-title="To use a CoinSimple plugin with Magento, WooCommerce, Wordress, etc., you will need two pieces of information: your Business ID and your API Key." data-toggle="tooltip" title=""></span></span>
+                    </div>
+
+                    <h2><span class="glyphicon glyphicon-phone"></span> Mobile App login credentials</h2>
+
+                    <div>
+                        <div id="qrcode" style="margin-top:30px;">
+                            <canvas height="200" width="200"></canvas>
+                        </div>
+                    </div><script>
+$("#qrcode").qrcode({
+                    size: 200,
+                    ecLevel: 'M',
+                    radius: 0.3,
+                    text: "4|c62be45a4229942ce2c24040eb37313e95cd7dfb"
+                    });
+                    </script>
+
+                    <div class="label_left">
+                        <span class="tooltip_container">Email: nikos@coinsimple.com</span>
+                    </div>
+
+                    <div class="label_left">
+                        <span class="tooltip_container">Pairing Code: GC62BE45A44</span>
+                    </div>
+
+                    <h2>Danger Zone</h2>
+
+                    <p><a class="btn btn-default" data-button="Delete" data-open="modal" data-text="Are you sure you want to delete this business?" data-title="Deleting Eureka Science" href="/archive">Delete Business</a></p>
+                </div>
+
+                <div id="processors_settings_tab" style="display: none">
+                    <h2>Bitcoin Wallets</h2>
+
+                    <div class="col-md-12">
+                        &nbsp;
+                    </div>
+
+                    <div class="row">
+                        <div style="margin-left: 2em">
+                            <div class="col-md-6" style="padding-left: 0px">
+                                <ul>
+                                    <li id="processor_container">
+                                        <div id="processor_border">
+                                            <div id="processor_button">
+                                                <div>
+                                                    <span class="processor_icon"><img alt="Electrum off" src="./assets/electrum_off-e45d91d6ab4800ccf47a1643417b2634.png"></span> <span>Electrum: Not Connected</span>
+                                                </div>
+
+                                                <div id="processor_button">
+                                                    <a class="btn btn-processor" href="/electrum" id="electrum_connect">Connect</a> <a class="btn btn-processor" href="https://coinsimple.com/support/how-can-i-accept-bitcoin-directly-to-my-electrum-wallet-using-coinsimple" target="_blank">Instructions</a>
+                                                </div><script>
+$("#electrum_connect").click(function(e){
+                                                e.preventDefault();
+                                                $.get("/dash/app/4/electrum/js", function(tx) {
+                                                $("#modal-title").text("");
+                                                $("#modal-text").html(tx);
+                                                $("#modal-link").click(function(){$(".processors_form").submit();});
+                                                $("#modal-link").text("Connect");
+                                                $("#modal").modal()
+                                                });
+                                                return false;
+                                                });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6" style="padding-left: 0px">
+                                <ul>
+                                    <li id="processor_container">
+                                        <div id="processor_border">
+                                            <div id="processor_button">
+                                                <div>
+                                                    <span class="processor_icon"><img alt="Multisigelectrum" src="./assets/multisigelectrum-26f5a524f23751f8c89315ce2ea7e59c.png"></span> <span>Multi-Sig Electrum: Connected</span>
+                                                </div>
+
+                                                <div id="processor_button">
+                                                    <a class="btn btn-processor" data-button="Disconnect" data-open="modal" data-text="Are you sure you want to disconnect Multi-Sig Electrum?" data-title="Disconnect Multi-Sig Electrum" href="/remove/multisigelectrum">Disconnect</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6" style="padding-left: 0px">
+                                <ul>
+                                    <li id="processor_container">
+                                        <div id="processor_border">
+                                            <div id="processor_button">
+                                                <div>
+                                                    <span class="processor_icon"><img alt="Armory" src="./assets/armory-92c612e1e1fd220765efc1e83a1a5339.png"></span> <span>Armory: Connected</span>
+                                                </div>
+
+                                                <div id="processor_button">
+                                                    <a class="btn btn-processor" data-button="Disconnect" data-open="modal" data-text="Are you sure you want to disconnect Armory?" data-title="Disconnect Armory" href="/remove/armory">Disconnect</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6" style="padding-left: 0px">
+                                <ul>
+                                    <li id="processor_container">
+                                        <div id="processor_border">
+                                            <div id="processor_button">
+                                                <div>
+                                                    <span class="processor_icon"><img alt="Trezor" src="./assets/trezor-aa7ccb229bfcde2b5929771f328e987e.png"></span> <span>Trezor: Connected</span>
+                                                </div>
+
+                                                <div id="processor_button">
+                                                    <a class="btn btn-processor" data-button="Disconnect" data-open="modal" data-text="Are you sure you want to disconnect Trezor?" data-title="Disconnect Trezor" href="/remove/trezor">Disconnect</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6" style="padding-left: 0px">
+                                <ul>
+                                    <li id="processor_container">
+                                        <div id="processor_border">
+                                            <div id="processor_button">
+                                                <div>
+                                                    <span class="processor_icon"><img alt="Wallet off" src="./assets/wallet_off-7b94ee37a3e7c408be4cdbd9a4f0a7dd.png"></span> <span>Other: Not Connected</span>
+                                                </div>
+
+                                                <div id="processor_button">
+                                                    <a class="btn btn-processor" href="/wallet" id="wallet_connect">Connect</a> <a class="btn btn-processor" href="https://coinsimple.com/support/how-can-i-accept-bitcoin-directly-to-a-bitcoin-address-using-coinsimple" target="_blank">Instructions</a>
+                                                </div><script>
+$("#wallet_connect").click(function(e){
+                                                e.preventDefault();
+                                                $.get("/dash/app/4/wallet/js", function(tx) {
+                                                $("#modal-title").text("");
+                                                $("#modal-text").html(tx);
+                                                $("#modal-link").click(function(){$(".processors_form").submit();});
+                                                $("#modal-link").text("Connect");
+                                                $("#modal").modal()
+                                                });
+                                                return false;
+                                                });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Bitcoin Exchanges</h2>
+
+                    <div class="col-md-12">
+                        &nbsp;
+                    </div>
+
+                    <div class="row">
+                        <div style="margin-left: 2em">
+                            <div class="col-md-6" style="padding-left: 0px">
+                                <ul>
+                                    <li id="processor_container">
+                                        <div id="processor_border">
+                                            <div id="processor_button">
+                                                <div>
+                                                    <span class="processor_icon"><img alt="Mexbt" src="./assets/mexbt-b1873d077c7bfb61f17096eff98ccd50.png"></span> <span>MeXBT: Connected</span>
+                                                </div>
+
+                                                <div id="processor_button">
+                                                    <a class="btn btn-processor" data-button="Disconnect" data-open="modal" data-text="Are you sure you want to disconnect MeXBT?" data-title="Disconnect MeXBT" href="/remove/mexbt">Disconnect</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Bitcoin processors</h2>
+
+                    <div class="col-md-12">
+                        &nbsp;
+                    </div>
+
+                    <div class="row">
+                        <div style="margin-left: 2em">
+                            <div class="col-md-6" style="padding-left: 0px">
+                                <ul>
+                                    <li id="processor_container">
+                                        <div id="processor_border">
+                                            <div id="processor_button">
+                                                <div>
+                                                    <span class="processor_icon"><img alt="Bitpay off" src="./assets/bitpay_off-ef9a2099ba8c979f0de7f03b6032ad6a.png"></span> <span>BitPay: Not Connected</span>
+                                                </div>
+
+                                                <div id="processor_button">
+                                                    <a class="btn btn-processor" href="/bitpay" id="bitpay_connect">Connect</a> <a class="btn btn-processor" href="https://coinsimple.com/support/how-can-i-connect-my-bitpay-account-with-coinsimple" target="_blank">Instructions</a>
+                                                </div><script>
+$("#bitpay_connect").click(function(e){
+                                                e.preventDefault();
+                                                $.get("/dash/app/4/bitpay/js", function(tx) {
+                                                $("#modal-title").text("");
+                                                $("#modal-text").html(tx);
+                                                $("#modal-link").click(function(){$(".processors_form").submit();});
+                                                $("#modal-link").text("Connect");
+                                                $("#modal").modal()
+                                                });
+                                                return false;
+                                                });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6" style="padding-left: 0px">
+                                <ul>
+                                    <li id="processor_container">
+                                        <div id="processor_border">
+                                            <div id="processor_button">
+                                                <div>
+                                                    <span class="processor_icon"><img alt="Coinbase off" src="./assets/coinbase_off-a44ea1ca577e96a8f43f33b66948ea71.png"></span> <span>Coinbase: Not Connected</span>
+                                                </div>
+
+                                                <div id="processor_button">
+                                                    <a class="btn btn-processor" href="/coinbase" id="coinbase_connect">Connect</a> <a class="btn btn-processor" href="https://coinsimple.com/support/how-can-i-connect-my-coinbase-account-with-coinsimple" target="_blank">Instructions</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6" style="padding-left: 0px">
+                                <ul>
+                                    <li id="processor_container">
+                                        <div id="processor_border">
+                                            <div id="processor_button">
+                                                <div>
+                                                    <span class="processor_icon"><img alt="Gocoin" src="./assets/gocoin-7686e13ec4dbbdac4ad5134721e1c552.png"></span> <span>GoCoin: Connected</span>
+                                                </div>
+
+                                                <div id="processor_button">
+                                                    <a class="btn btn-processor" data-button="Disconnect" data-open="modal" data-text="Are you sure you want to disconnect GoCoin?" data-title="Disconnect GoCoin" href="/remove/gocoin">Disconnect</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="col-md-10 col-md-offset-1 footer">
+            <p>CoinSimple, 2015</p>
+        </div>
+    </footer>
+</body>
+</html>

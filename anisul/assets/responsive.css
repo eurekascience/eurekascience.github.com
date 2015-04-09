@@ -1,0 +1,332 @@
+
+/* Responsive code for 01-dashboard.html*/
+.container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse{
+	margin-right:0px;
+}
+form .row.invoice-details textarea{ 
+	width:calc(100% - 120px);
+}
+@media screen and (min-width:992px) and (max-width:1024px){
+	.row.account-summary{
+		margin-left:-30px;
+	}
+} 
+@media screen and (max-width:999px){
+	.primary.main_area .row.account-summary{
+		margin-left:0px;
+	}
+	.primary.main_area{
+		padding-left:30px;
+	}
+	.settings-page .item{
+		padding-left:30px !important;
+	}
+	.account-summary .primary{
+		 
+	}
+	.settings-page h2{
+		margin-left:30px;
+	}
+	form .row.invoice-details textarea{ 
+		width:60%;
+	}
+	.settings-page{
+		padding-left:30px;
+	}
+}
+@media screen and (max-width:768px){
+	.sidebar, a.sidebar{
+		display:none;
+		width:100%;
+	}
+	.nav>li.message_alert{
+		padding-left:30px;
+	}
+	.settings-page .item ul #processor_border #processor_button{	
+	min-height: auto;
+	}
+	.settings-page .item ul #processor_border #processor_button div{
+		width:100%;
+	}
+	.settings-page .item ul #processor_border #processor_button #processor_button{
+		text-align:left;
+	}
+	.processor_icon img{
+		padding:0;
+	}
+	.settings-page .item ul #processor_border #processor_button #processor_button{
+		margin-bottom:10px;
+		padding-bottom:10px
+	}
+	.settings-page .item ul #processor_border #processor_button #processor_button a{
+		margin-right:30px;
+		margin-left:0;
+	}
+	
+	.navbar-header{
+		width:45%;
+		float:left;
+		margin:0;
+	}
+	.navbar-header a.navbar-brand{
+		padding-right:0;
+	}
+	.navbar-header a.navbar-brand img{
+		max-width:80%;
+	}
+	.collapse.navbar-collapse{
+		width:55%;
+		float:right;
+		padding:0 15px 0 0;
+		margin:0;
+		text-align:right;
+	}
+	.collapse.navbar-collapse ul{
+		margin:0;
+	}
+	.collapse.navbar-collapse ul li{
+		padding:0;
+		display:inline-block;
+	}
+	.collapse.navbar-collapse ul li a{
+		padding:0;
+		margin:0 !important;
+	}
+	.collapse.navbar-collapse ul li a img{
+		max-width:35px;
+	}
+	.nav > li.message_alert{
+		margin-right:10px;
+	} 
+	.total{
+		display:block;
+		padding-top: 15px;
+	}
+	.toggle_menu {
+		display:inline-block;
+		margin-left: 30px;
+		margin-top: 18px;
+		padding:3px 10px 8px;
+		background:#2162ad;
+	}
+	footer .footer p{
+		padding:0;
+	}
+	form .row label{
+		font-size:14px;
+	}
+	.primary form .buttons .btn-danger {
+		font-size:14px;
+		font-weight:400;
+		white-space:inherit;
+		margin:auto;
+	}
+	.row.invoice-details.shaded .col-sm-4{
+		padding-bottom:15px;
+		margin-bottom:15px;
+		border-bottom:1px dotted #ccc;
+		line-height:21px;
+	}
+	.row.invoice-details.shaded .col-sm-4:nth-child(3) { 
+		border-bottom:0px;
+		padding-bottom:0px;
+		margin-bottom:0px;
+	}
+	.total {
+		display: block;
+		margin-top: -20px;
+		padding-top: 5px;
+	}
+	.pay-invoice .address{
+		font-size:12px;
+	}
+	.pay-invoice .header{
+		margin:0;
+	}
+	.centered_form .login-row.settings-page h2{
+		font-size:20px;
+		margin-left:0;
+	}
+	.total{
+		margin-top:20px;
+	}
+	.small_header{
+		padding-left:0;
+	}
+	table .due{
+		padding-right:0;
+		width:60px;
+	}
+	table.invoices tr td{
+		vertical-align:top;
+	}
+	table.invoices tr td.due .pill.success{
+		line-height:18px;
+	}
+	table.invoices tr td.details a{
+		font-size:15px;
+	}
+	.primary.small_header.col-md-12 .mobile_display{
+		display:block;
+	}
+	#export_data .export_btn{
+		margin-right:0;
+		display:block;
+	}
+	.primary.main_area h2{
+		margin-top:0px;
+	}
+	.account-summary .small_header{
+		margin-left:30px;
+	}
+	.tooltip_container{
+		display:block; 
+	}
+	#business_information_tab .settings_form label{
+		width:100%;
+	}
+	.settings_form input[type="text"],.settings_form textarea,.settings_form select{
+		width:100% !important;
+	}
+	.settings-page .account-summary .small_header .separator{
+		width:20px;
+	}
+	.settings-page .account-summary .small_header{
+		border-bottom:1px dotted #CCCCCC; 
+		padding-right:0;
+		margin-right:30px;
+	}
+	.settings-page .account-summary .small_header a{
+		font-size:12px;
+	}
+	.settings-page .account-summary .small_header a.active{
+		border-bottom:2px solid #4a90e2;
+		padding-bottom:17px;
+	}
+	#business_information_tab h2{
+		margin:15px 0 0 0;
+	}
+	#business_information_tab .btn.btn-default{
+		width:100%;
+	}
+	.settings-page h2{
+		margin-left:0;
+	}
+	.grand-total .total{
+		margin-top:-25px;
+	}
+	.primary.main_area .account-summary .small_header{
+		margin-left:0;
+	}
+	.pop_up .pop_up_content .cont a, .pop_up .pop_up_content .cont button{
+		display:block;
+		text-align:center;
+		width:100%;
+	}
+	.pop_up .pop_up_content .cont button{
+		margin-top:0;
+	}
+	.custom_table div{
+		padding-right:0;
+	}
+	.custom_table .description, .custom_table .qty,.custom_table .u_price,.custom_table .total_price{
+		width:100%;
+		margin-bottom:0;
+	}
+	.new_invoice table.totals tr.grand-total td.total{
+		 margin-top: 15px;
+	} 
+	.totals .shaded, .totals .total{
+		width:140px;
+	}
+	.navbar-header{
+		display:none;
+	}
+	.mobile_new_invoice,.mobile_new_invoice a.float-btn{
+		width:100%
+	}
+	.collapse.navbar-collapse ul li.message_alert{
+		display:none;
+	}
+	.collapse.navbar-collapse ul li a.dropdown-toggle .name{
+		display:none;
+	}
+	.account-summary .primary  .total{
+		border-top:1px dotted #ccc;
+	}
+	.primary.small_header.col-md-12 .mobile_display{
+		border-bottom:1px dotted #ccc;
+		margin-bottom:20px;
+	}
+	.collapse.navbar-collapse{
+		padding-right:30px;
+	}
+	
+	.public_invoice .navbar-header, .public_form .navbar-header, .public_payment .navbar-header{
+		display:block;
+		margin-left:-5px;
+	}
+	
+	.pay-invoice h1, .pay-invoice .total,.pay-invoice p.small{
+		text-align:center;
+	}
+}
+
+
+@media screen and (max-width:500px){
+	.settings-page .item ul #processor_border #processor_button div{
+		text-align:center;
+	}
+	.settings-page .item ul #processor_border #processor_button div .processor_icon{
+		width:100%;
+		margin-bottom:10px;
+		text-align:center;
+	}
+	.settings-page .item ul #processor_border #processor_button #processor_button a{
+		margin-right:0;
+		width:100%;
+		margin-bottom:20px;
+	}
+	.settings-page .item{
+		padding-left:10px !important;
+	}
+	.pay-invoice .payment .btn.btn-default,.centered_form .login-row.settings-page .btn{
+		width:100%;
+	}
+	.centered_form .login-row.settings-page h2{
+		line-height: 30px;
+		text-align:center;
+	}
+	body.pop_up .s_content table tr td .large{
+		font-size:16px;
+	}
+	body.pop_up .s_content .top{
+		margin-top:20px;
+	}
+	.custom_table div.both input{
+		width:88%;
+	}
+}
+@media screen and (max-width:370px){
+	.collapse.navbar-collapse{
+		width:60%;
+	}
+	.view-invoice .header .btn.btn-lg.btn-danger{
+		width:100%;
+	}
+}
+@media screen and (max-width:335px){
+	.collapse.navbar-collapse{
+		width:64%;
+	}
+}
+@media screen and (min-width:768px){
+	.visible-xs{
+		display:none;
+	}
+}
+@media screen and (min-width:999px){
+	.col-md-9.s_content{
+		margin-top:-40px;
+	}
+}
