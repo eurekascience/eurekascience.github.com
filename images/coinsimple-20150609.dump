@@ -1,0 +1,983 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+--
+-- Name: pg_stat_statements; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS pg_stat_statements WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION pg_stat_statements; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION pg_stat_statements IS 'track execution statistics of all SQL statements executed';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: buttons; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE buttons (
+    id integer NOT NULL,
+    notes text,
+    shop_id integer,
+    secret character varying(255),
+    processor character varying(255),
+    callback_url character varying(255),
+    redirect_url character varying(255),
+    invoice_type character varying(255),
+    "interval" integer,
+    currency character varying(255),
+    conversion_method character varying(255),
+    percent double precision,
+    archived boolean,
+    recurring_times integer,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    name character varying(255),
+    counter integer
+);
+
+
+ALTER TABLE buttons OWNER TO nikos;
+
+--
+-- Name: buttons_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE buttons_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE buttons_id_seq OWNER TO nikos;
+
+--
+-- Name: buttons_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE buttons_id_seq OWNED BY buttons.id;
+
+
+--
+-- Name: delayed_jobs; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE delayed_jobs (
+    id integer NOT NULL,
+    priority integer DEFAULT 0 NOT NULL,
+    attempts integer DEFAULT 0 NOT NULL,
+    handler text NOT NULL,
+    last_error text,
+    run_at timestamp without time zone,
+    locked_at timestamp without time zone,
+    failed_at timestamp without time zone,
+    locked_by character varying(255),
+    queue character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE delayed_jobs OWNER TO nikos;
+
+--
+-- Name: delayed_jobs_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE delayed_jobs_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE delayed_jobs_id_seq OWNER TO nikos;
+
+--
+-- Name: delayed_jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE delayed_jobs_id_seq OWNED BY delayed_jobs.id;
+
+
+--
+-- Name: fees; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE fees (
+    id integer NOT NULL,
+    processor character varying(255),
+    seed integer,
+    amount integer,
+    address character varying(255),
+    paid boolean,
+    invoice_id integer,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE fees OWNER TO nikos;
+
+--
+-- Name: fees_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE fees_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE fees_id_seq OWNER TO nikos;
+
+--
+-- Name: fees_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE fees_id_seq OWNED BY fees.id;
+
+
+--
+-- Name: invoices; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE invoices (
+    id integer NOT NULL,
+    recipient character varying(255),
+    email character varying(255),
+    paid boolean,
+    notes text,
+    transaction_url character varying(255),
+    old_items text,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    shop_id integer,
+    secret character varying(255),
+    wallet_address character varying(255),
+    invoice_number integer,
+    amount_paid double precision,
+    processor character varying(255),
+    custom character varying(255),
+    redirect_url character varying(255),
+    callback_url character varying(255),
+    invoice_type character varying(255),
+    "group" integer,
+    "interval" integer,
+    next_date integer,
+    total double precision,
+    paid_at timestamp without time zone,
+    paid_through character varying(255),
+    total_btc double precision,
+    seed integer,
+    currency character varying(255),
+    conversion_method character varying(255),
+    percent double precision,
+    archived boolean,
+    recurring_times integer,
+    email_sent boolean,
+    rejected boolean,
+    rate_used character varying(255),
+    address text,
+    fee_rate integer
+);
+
+
+ALTER TABLE invoices OWNER TO nikos;
+
+--
+-- Name: invoices_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE invoices_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE invoices_id_seq OWNER TO nikos;
+
+--
+-- Name: invoices_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE invoices_id_seq OWNED BY invoices.id;
+
+
+--
+-- Name: items; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE items (
+    id integer NOT NULL,
+    description character varying(255),
+    quantity integer,
+    price double precision,
+    invoice_id integer,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    button_id integer
+);
+
+
+ALTER TABLE items OWNER TO nikos;
+
+--
+-- Name: items_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE items_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE items_id_seq OWNER TO nikos;
+
+--
+-- Name: items_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE items_id_seq OWNED BY items.id;
+
+
+--
+-- Name: logs; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE logs (
+    id integer NOT NULL,
+    message character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    user_id integer
+);
+
+
+ALTER TABLE logs OWNER TO nikos;
+
+--
+-- Name: logs_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE logs_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE logs_id_seq OWNER TO nikos;
+
+--
+-- Name: logs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE logs_id_seq OWNED BY logs.id;
+
+
+--
+-- Name: plans; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE plans (
+    id integer NOT NULL,
+    starter_price integer,
+    business_price integer,
+    enterprise_price integer,
+    starter_percent integer,
+    business_percent integer,
+    enterprise_percent integer,
+    plan_num_months integer,
+    starter_year_price integer,
+    business_year_price integer,
+    enterprise_year_price integer,
+    starter_free_invoices integer,
+    business_free_invoices integer,
+    enterprise_free_invoices integer,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    name character varying(255),
+    business_free_days integer,
+    starter_free_days integer,
+    enterprise_free_days integer
+);
+
+
+ALTER TABLE plans OWNER TO nikos;
+
+--
+-- Name: plans_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE plans_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE plans_id_seq OWNER TO nikos;
+
+--
+-- Name: plans_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE plans_id_seq OWNED BY plans.id;
+
+
+--
+-- Name: processor_rates; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE processor_rates (
+    id integer NOT NULL,
+    name character varying(255),
+    amount double precision,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    currency character varying(255)
+);
+
+
+ALTER TABLE processor_rates OWNER TO nikos;
+
+--
+-- Name: processor_rates_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE processor_rates_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE processor_rates_id_seq OWNER TO nikos;
+
+--
+-- Name: processor_rates_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE processor_rates_id_seq OWNED BY processor_rates.id;
+
+
+--
+-- Name: processors; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE processors (
+    id integer NOT NULL,
+    processor_class character varying(255),
+    keys text,
+    puid character varying(255),
+    status character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    shop_id integer
+);
+
+
+ALTER TABLE processors OWNER TO nikos;
+
+--
+-- Name: processors_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE processors_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE processors_id_seq OWNER TO nikos;
+
+--
+-- Name: processors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE processors_id_seq OWNED BY processors.id;
+
+
+--
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE schema_migrations (
+    version character varying(255) NOT NULL
+);
+
+
+ALTER TABLE schema_migrations OWNER TO nikos;
+
+--
+-- Name: shops; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE shops (
+    id integer NOT NULL,
+    name character varying(255),
+    default_currency character varying(255),
+    description text,
+    user_id integer,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    api_key character varying(255),
+    archived boolean,
+    default_processor character varying(255),
+    default_rate character varying(255),
+    receive_email_on_payment boolean,
+    recieve_invoice_mail boolean,
+    address text
+);
+
+
+ALTER TABLE shops OWNER TO nikos;
+
+--
+-- Name: shops_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE shops_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE shops_id_seq OWNER TO nikos;
+
+--
+-- Name: shops_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE shops_id_seq OWNED BY shops.id;
+
+
+--
+-- Name: users; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE users (
+    id integer NOT NULL,
+    name character varying(255),
+    email character varying(255),
+    password_digest character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    account_type character varying(255),
+    authenticator_key character varying(255),
+    temp_authenticator_key character varying(255),
+    archived boolean,
+    recieve_login_mail boolean,
+    fee_rate integer,
+    plan character varying(255),
+    num_invoices integer,
+    plan_date timestamp without time zone,
+    plan_id integer,
+    trezor_key character varying(255),
+    trezor_login boolean,
+    require_trezor boolean
+);
+
+
+ALTER TABLE users OWNER TO nikos;
+
+--
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE users_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE users_id_seq OWNER TO nikos;
+
+--
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE users_id_seq OWNED BY users.id;
+
+
+--
+-- Name: wallet_transactions; Type: TABLE; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE TABLE wallet_transactions (
+    id integer NOT NULL,
+    end_address character varying(255),
+    forward_address character varying(255),
+    transaction_id integer,
+    secret character varying(255),
+    total double precision,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    total_paid double precision,
+    callback_url character varying(255),
+    expires_at integer
+);
+
+
+ALTER TABLE wallet_transactions OWNER TO nikos;
+
+--
+-- Name: wallet_transactions_id_seq; Type: SEQUENCE; Schema: public; Owner: nikos
+--
+
+CREATE SEQUENCE wallet_transactions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE wallet_transactions_id_seq OWNER TO nikos;
+
+--
+-- Name: wallet_transactions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: nikos
+--
+
+ALTER SEQUENCE wallet_transactions_id_seq OWNED BY wallet_transactions.id;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY buttons ALTER COLUMN id SET DEFAULT nextval('buttons_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY delayed_jobs ALTER COLUMN id SET DEFAULT nextval('delayed_jobs_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY fees ALTER COLUMN id SET DEFAULT nextval('fees_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY invoices ALTER COLUMN id SET DEFAULT nextval('invoices_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY items ALTER COLUMN id SET DEFAULT nextval('items_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY logs ALTER COLUMN id SET DEFAULT nextval('logs_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY plans ALTER COLUMN id SET DEFAULT nextval('plans_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY processor_rates ALTER COLUMN id SET DEFAULT nextval('processor_rates_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY processors ALTER COLUMN id SET DEFAULT nextval('processors_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY shops ALTER COLUMN id SET DEFAULT nextval('shops_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: nikos
+--
+
+ALTER TABLE ONLY wallet_transactions ALTER COLUMN id SET DEFAULT nextval('wallet_transactions_id_seq'::regclass);
+
+
+--
+-- Data for Name: buttons; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY buttons (id, notes, shop_id, secret, processor, callback_url, redirect_url, invoice_type, "interval", currency, conversion_method, percent, archived, recurring_times, created_at, updated_at, name, counter) FROM stdin;
+\.
+
+
+--
+-- Name: buttons_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('buttons_id_seq', 55, true);
+
+
+--
+-- Data for Name: delayed_jobs; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY delayed_jobs (id, priority, attempts, handler, last_error, run_at, locked_at, failed_at, locked_by, queue, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: delayed_jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('delayed_jobs_id_seq', 1, false);
+
+
+--
+-- Data for Name: fees; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY fees (id, processor, seed, amount, address, paid, invoice_id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: fees_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('fees_id_seq', 34, true);
+
+
+--
+-- Data for Name: invoices; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY invoices (id, recipient, email, paid, notes, transaction_url, old_items, created_at, updated_at, shop_id, secret, wallet_address, invoice_number, amount_paid, processor, custom, redirect_url, callback_url, invoice_type, "group", "interval", next_date, total, paid_at, paid_through, total_btc, seed, currency, conversion_method, percent, archived, recurring_times, email_sent, rejected, rate_used, address, fee_rate) FROM stdin;
+\.
+
+
+--
+-- Name: invoices_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('invoices_id_seq', 958, true);
+
+
+--
+-- Data for Name: items; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY items (id, description, quantity, price, invoice_id, created_at, updated_at, button_id) FROM stdin;
+\.
+
+
+--
+-- Name: items_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('items_id_seq', 1155, true);
+
+
+--
+-- Data for Name: logs; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY logs (id, message, created_at, updated_at, user_id) FROM stdin;
+2279	User logged in from 127.0.0.1	2015-06-09 16:48:02.841887	2015-06-09 16:48:02.841887	352
+\.
+
+
+--
+-- Name: logs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('logs_id_seq', 2279, true);
+
+
+--
+-- Data for Name: plans; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY plans (id, starter_price, business_price, enterprise_price, starter_percent, business_percent, enterprise_percent, plan_num_months, starter_year_price, business_year_price, enterprise_year_price, starter_free_invoices, business_free_invoices, enterprise_free_invoices, created_at, updated_at, name, business_free_days, starter_free_days, enterprise_free_days) FROM stdin;
+\.
+
+
+--
+-- Name: plans_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('plans_id_seq', 1, false);
+
+
+--
+-- Data for Name: processor_rates; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY processor_rates (id, name, amount, created_at, updated_at, currency) FROM stdin;
+\.
+
+
+--
+-- Name: processor_rates_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('processor_rates_id_seq', 700, true);
+
+
+--
+-- Data for Name: processors; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY processors (id, processor_class, keys, puid, status, created_at, updated_at, shop_id) FROM stdin;
+\.
+
+
+--
+-- Name: processors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('processors_id_seq', 275, true);
+
+
+--
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY schema_migrations (version) FROM stdin;
+\.
+
+
+--
+-- Data for Name: shops; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY shops (id, name, default_currency, description, user_id, created_at, updated_at, api_key, archived, default_processor, default_rate, receive_email_on_payment, recieve_invoice_mail, address) FROM stdin;
+\.
+
+
+--
+-- Name: shops_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('shops_id_seq', 324, true);
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY users (id, name, email, password_digest, created_at, updated_at, account_type, authenticator_key, temp_authenticator_key, archived, recieve_login_mail, fee_rate, plan, num_invoices, plan_date, plan_id, trezor_key, trezor_login, require_trezor) FROM stdin;
+352	Nikoss	nikos@bentenitis.com	$2a$10$v2SPAGJcNgMbWTiu1u02Gu0yKcXn8oFiPPgwN4nKseGdkxMZn/9fO	2015-06-09 16:45:01.184271	2015-06-09 16:48:02.844469	free	\N	\N	f	t	100	starter	0	2015-06-09 16:45:01.190142	1	\N	\N	\N
+\.
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('users_id_seq', 352, true);
+
+
+--
+-- Data for Name: wallet_transactions; Type: TABLE DATA; Schema: public; Owner: nikos
+--
+
+COPY wallet_transactions (id, end_address, forward_address, transaction_id, secret, total, created_at, updated_at, total_paid, callback_url, expires_at) FROM stdin;
+\.
+
+
+--
+-- Name: wallet_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nikos
+--
+
+SELECT pg_catalog.setval('wallet_transactions_id_seq', 866, true);
+
+
+--
+-- Name: buttons_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY buttons
+    ADD CONSTRAINT buttons_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: delayed_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY delayed_jobs
+    ADD CONSTRAINT delayed_jobs_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: fees_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY fees
+    ADD CONSTRAINT fees_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: invoices_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY invoices
+    ADD CONSTRAINT invoices_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: items_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY items
+    ADD CONSTRAINT items_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: logs_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY logs
+    ADD CONSTRAINT logs_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: plans_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY plans
+    ADD CONSTRAINT plans_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: processor_rates_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY processor_rates
+    ADD CONSTRAINT processor_rates_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: processors_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY processors
+    ADD CONSTRAINT processors_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: shops_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY shops
+    ADD CONSTRAINT shops_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: wallet_transactions_pkey; Type: CONSTRAINT; Schema: public; Owner: nikos; Tablespace: 
+--
+
+ALTER TABLE ONLY wallet_transactions
+    ADD CONSTRAINT wallet_transactions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: delayed_jobs_priority; Type: INDEX; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE INDEX delayed_jobs_priority ON delayed_jobs USING btree (priority, run_at);
+
+
+--
+-- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: nikos; Tablespace: 
+--
+
+CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
